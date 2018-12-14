@@ -8,6 +8,7 @@ J'ai donc cherché sur internet des exemples de commandes vocales sur Arduino.
 J'ai trouvé le site:  https://www.instructables.com/id/Voice-Activated-Arduino-Bluetooth-Android/
 qui passe par l'application Arduino voice commande et un autre site ou une personne a domotisé sa maison via commande vocale
 avec cet application.
+J'ai donc récuperé un module bluetooth
 J'ai donc entrepris de créer un programme permettant d'allumer une led via une commande vocale pour voir comment marche l'application,
 
 j'ai aussi trouvé l'application YouCan qui permet d'envoyer plus de données diverses par défaut si jamais
