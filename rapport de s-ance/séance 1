@@ -1,2 +1,21 @@
+On a défini le travail dans le temps pour armel et moi .
+voir le excel plus loin.
+J'ai cherché les anciens barduinos des groupes ayant réalisé le barduino les années précedentes .
+Le groupe d'il y a deux ans n'ayant pas mis son code dans son rapport laissé sur internet .
+Nous leurs avons donc envoyé un mail pour leurs demandé leur trace de code si il les avaient encore.
+Je me suis ensuite penché sur la commande vocal depuis le téléphone via le bluetooth
+J'ai donc cherché sur internet des exemples de commande vocale sur arduino 
+J'ai trouvé le site:  https://www.instructables.com/id/Voice-Activated-Arduino-Bluetooth-Android/
+qui passe par l'application arduino voice commande et un autre site ou une personne a domotisé sa maison via commande vocal
+avec cet appli
+J'ai donc entrepris de créer un programme permettant d'allumer une led via une commande vocal pour voir comment marcher l'application
 
-essais.
+j'ai aussi trouver l'application YouCan qui permet d'envoyer plus de donné diverse par défaut si jamais
+l'application précedente ne suffit pas
+
+
+
+
+
+
+
