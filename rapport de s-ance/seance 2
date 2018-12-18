@@ -1,0 +1,7 @@
+Après plusieurs essais d'allumer une led avec une application bluetooth téléchargé sur internet cependant cela semble marcher sur sa vidéo
+mais je ne lit rien sur mon buffer l'application semble ne pas envoyer de donné au module bluetooth le buffer reste toujours vide 
+l'application se connecte pourtant au module car il cesse de fonctionner j'ai trouvé sur internet une autres applications 
+Cependant si je n'arrive toujours pas a faire marcher ces applications qui n'ont toute pas de doc je créerais mon propre programme avec 
+appinventor il y a beaucoup de tuto bien expliqué qui me permettront de controler ce qu'il se passe dans l'application.
+Avec la seconde application "voice controller" je ne trouve aucun message dans le buffer le serie.avilable() est toujours vide 
+je vais donc chercher a créer l'application pendant les vacances .
