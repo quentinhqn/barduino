@@ -1,4 +1,13 @@
 Depuis l'application MIT app inventor je tente de créer une application communiquant avec un module bluetooth deuis un télephone 
 Avantage de pouvoir personaliser l'application puis principalement d'être la seul alternative trouvé pour transferer une chaine de caractère 
-issue d'une voix vers un module bluetoothe (il existe des applications deja faites semblan réaliser la même operations seulement elle n'ont
+issue d'une voix vers un module bluetoothe (il existe des applications deja faites semblant réaliser la même operations seulement elle n'ont
 pas la documentation fournie avec je n'arrive donc pas à récuperer les données envoyées .
+J'ai donc réussi une application commandant des led par commande vocal depuis le téléphone .
+On a aussi reçu les courroies servant au déplacement du verre pour le barduino ,on a donc commencé a démonter l'ancien système de vis sans
+fin servant a déplacer le verre.
+
+La première application n'étant pas très ergonomique et esthetique on va essayer de programmer une deuxième application.
+On va donc la programmer avec plusieurs screen .
+Le premier permettra de se connecter au module bluetooth une fois fait on atteindra le deuxieme screen qui permet de voire une 
+liste des cocktails et ou l'on peut lancer la commande vocale par l'appuie d'un bouton ou bien par e passage de la main sur l'ecran. 
+
