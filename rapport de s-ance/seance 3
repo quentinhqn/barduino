@@ -9,5 +9,7 @@ fin servant a déplacer le verre.
 La première application n'étant pas très ergonomique et esthetique on va essayer de programmer une deuxième application.
 On va donc la programmer avec plusieurs screen .
 Le premier permettra de se connecter au module bluetooth une fois fait on atteindra le deuxieme screen qui permet de voire une 
-liste des cocktails et ou l'on peut lancer la commande vocale par l'appuie d'un bouton ou bien par e passage de la main sur l'ecran. 
+liste des cocktails et ou l'on peut lancer la commande vocale par l'appuie d'un bouton ou bien par le passage de la main sur l'ecran.
+
+
 
