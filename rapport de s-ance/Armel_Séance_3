@@ -14,7 +14,7 @@ La deuxième consiste à faire fonctionner le servomoteur pour servir un nombre 
 Aujourd'hui je comptais tester le déplacement du plateau mais nous n'avions pas encore fixé ce dernier car les courroies sont seulement 
 arrivées pendant les vacances. J'ai donc démonté le dernier moteur pas à pas, démonté la vis sans fin associée et décollé des pièces de bois 
 du plateau pour pouvoir fixer la courroie qui déplace le plateau sur la longueur à la place. Au final j'ai fixé la courroie légèrement plus 
-sur l'arrière du plateau. 
+sur l'arrière du plateau. Voir photo fixation courroie.jpg.
 Ensuite j'ai fixé le premier moteur au socle du barduino (une tâche compliquée car la visseuse ne passait pas d'un des côtés du moteur).
 Pour finir, j'ai commencé à m'intéresser à la poulie à l'autre bout de la courroie. J'ai sélectionné une vis sur laquelle nous laisserons la
 poulie tourner, j'ai placer un écrou pour contraindre la poulie de rester à la bonne position et j'ai coupé une pièce de bois pour fixer la 
