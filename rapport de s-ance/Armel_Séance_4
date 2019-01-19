@@ -1,0 +1,28 @@
+Pendant la semaine j'ai coder un programme permettant de déplacer le plateau et de renvoyer sa position afin de connaître la position des
+bouteilles.
+Dans l'optique de présenter aux professeur un apercu de l'avancée de notre projet j'ai ensuite fait une liste de toutes les tâches à 
+effectuer pendant ce cours. Malheureusement mon ordinateur est resté bloqué et nous n'y avons donc pas eu accès (j'ai de gros problèmes 
+avec mon ordinateur mais ça ira mieux après le ski).
+Je pensais que Quentin pourrait m'aider avec le déplacement du plateau mais il a été plus occupé que prévu avec son application de menu.
+Je n'ai donc pas atteind les objectifs que je m'étais donné pour cette séance qui étaient de mettre les deux courroies en place ainsi que
+les capteurs dans le but de présenter un plateau qui se déplacerait. Je pense que j'ai un peu sous estimé le temps que chaque étape 
+prendrais.
+
+J'ai commencé par coller une pièce de bois sur le socle dans laquelle j'ai vissé une grande vis avec une poulie au bout. Cette poulie
+permettra de finaliser la pose de la première courroie. Je n'avais plus qu'à fixer la deuxième extrémité de la courroie au plateau en 
+faisant bien attention de la faire passer dans la poulie du moteur et dans celle que je venais de fixer. Malheureusement je n'ai pas pu 
+le faire car la pièce de bois mentionnée précédamment n'était pas suffisamment fixée. Je l'ai donc recollée mais lors de l'essai 
+suivant juste avant l'arrivée des proffesseurs la pièce n'étais toujours pas bien collée. Or pour fixer la courroie, il faut la tendre au
+maximum ce qui déplacerait la pièce de bois et il n'y aurait plus qu'à recommencer.
+
+En attendant que ce collage sèche, j'ai cherché tout les longs fils dont j'avais besoins par la suite pour mes moteurs et capteurs. Au 
+final j'ai opté pour des fils gainés pour augmenter la sécurité (des fils qui trainent ça ne fait pas très pro). Ensuite je les ais tous 
+dénudés.
+
+Enfin, j'ai chercher comment fixer la 2ème courroie au plateau. J'ai remarqué que le plateau est trop petit pour y ajouter un des moteurs à
+ma disposition. Il faudra que je l'agrandisse à l'aide d'une pièce de bois supplémentaire. De plus, un dispositif permettant de déplacer 
+le plateau grâce aux vis sans fin était toujours en place et m'enpêchait d'installer la 2ème courroie comme je le souhaitait. Il s'agissait
+d'une pièce de bois située entre deux des roulettes et le plateau. J'ai donc du la scier pour retirer seulement la partie qui me gênait et 
+laisser les roulettes à leur place. Ensuite j'ai préparer une autre pièce de bois (sciée à la bonne dimension) qui se logera dans l'espace 
+que je viens de libéré et qui servira à fixer la 2ème courroie à la bonne hauteur.
+
