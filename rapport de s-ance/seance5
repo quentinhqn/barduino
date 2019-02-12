@@ -1,0 +1,19 @@
+pendant la sceance 5 nous avons réunni les deux codes arduino de armel et moi permettant ainsi de donner des ordres depuis 
+l'application mobile au moteur a courant continu je me suis donc chargé de coder la jonction du code entre les deux codes 
+j'ai pue ainsi verifier le bon fonctionnement des codes 
+ensuite nous avons commencé a fixer tous les moteurs à leurs anciennes positions seulement les nouveaux moteur continue bien 
+que plus puissant et rapide que les anciens servo moteurs sont aussi plus volumineux nous avons donc du adapter la base de l'arduino en 
+changant la place des moteurs pour ce faire nous avons donc du placer une barrette de bois avec une vis sur le coté droit du bar
+servant de pivot pour la courroie comme présenté sur la photo pivot(non ajouté pour le moment) puis en placant le second moteur servant a 
+la translation de la pallette se placant sous les boutteille nous nous sommes rendu compte que son ancienne place causé de nombreux soucie 
+dont notamment son poid qui trop lourd destabiliséle chariot en arrière a cause de ces roues trop centré sur le milieu nous avon don replacé 
+les roues à chaque coin du chariot et réhaussé une roue plus basse que les autres une fois régle le problème du poid il nous fallait placer le 
+avec le bout cranté accrochant la courroie au centre de la pallette placé sur le chariot cependant la pallette étant trop pettie nous avons
+placé une planche en bois en surplomb pour tenir le moteur le faisant ainsi dépasser du chariot de plus le fait qu'il soit plus large  
+que l'ancien ne permet donc pas que la pallette  puisse reculer au maximum pour atteindre les bouteilles.
+Pour solutionner ce probleme nous avos donc due rajouter une encoche dans le coins de la pallette permettant de laisser passer le moteur 
+dans l'ancienne structure de la pallette sans soucie puis se moteur se trouvant excentré sur le bord de la plateforme longeant tout le
+barduino avec la pallette nous nous sommes apercu que le depassement de la palette tapé sur la barre de bois permettant de tenir la vis comme 
+pivot nous avons donc due couper la moitié de boutde bois placé permettant ainsi d'avoir un mouvement qui semble manuellement opérationnel 
+nous attendons la sceance prochaine pour tenter de tout brancher et tester le fonctionnement.
+
