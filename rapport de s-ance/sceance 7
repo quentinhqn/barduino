@@ -1,0 +1,11 @@
+lors de la sceance 7 j'ai essayé de faire fonctionner le servomoteur qui ne marchait que dans un seul sens puis s'arreter de bouger en forcant 
+en fin de course.J'ai donc cherché a faire differentes boucles n pensant que c'etait le code qui était défectueux puis en cherchant la doc 
+du moteur je remarque u'il fonctionne sous 4.8 V ce que la carte arduino nano ne semblait pas pouvoir fournir .
+J'ai donc essayé avec la carte arduino uno qui permettait de faire fonctionner parfaitement le servo moteur .
+Ensuite nous avons cabler toutes les parties du barduino en raccordant toutes les parties ensembles j'ai donc passer un certain temps à 
+dénuder des fils et tout relier nous avons pu fixer la derniere courrroie que nous n'avions pas pu mettre la sceance précedente car la colle 
+n'avait pas encore pris cependant est apparu un nouveau probleme qui est que la courroie ne suffit pas a soutenir debout le chariot comme nous
+l'esperions nous avon s donc essayer de la tendre le plus possible sans succés .Il se peut que nous rajoutions un roue ou bien un support en
+servant de conne pour empecher le chariot de tomber 
+Sur la version la plus évoluer du code un autre probléme apparait car l' un des moteurs ne fonctionne plus nous allons chercher si cela est
+du a un mauvais branchement ou au code défectueux.
