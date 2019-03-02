@@ -13,6 +13,11 @@ int IN2 = 14;
 int ENB = 5;
 int IN3 = 6;
 int IN4 = 7;
+
+
+
+double i=0;
+double j=0;
 void setup() {
   Serial.begin(9600);
 
@@ -21,7 +26,16 @@ void setup() {
 void loop() {
   
   analogWrite(ENA,50);
-  Serial.println(ECHO1);
-  Serial.println(ECHO2);
+  digitalWrite(TRIG1,HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TRIG1,LOW);
+    i=pulseIn(ECHO1,HIGH);
+
+    digitalWrite(TRIG2,HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TRIG2,LOW);
+    j=pulseIn(ECHO2,HIGH);
+  Serial.println(i);
+  Serial.println(j);
 
 }
