@@ -1,1 +1,12 @@
-jeafneak
+Ce week-end, nous avons fait beaucoup de tests avec le barduino et nous avons rencontrés quelques problèmes.
+Tout d'abord, nous avons rectifiés plusieurs parties du code.
+Puis deux pièces de bois se sont décollées dû à une trop forte tenion exercée par les courroies. Nous les avons donc vissées au plateau.
+L'une directement au travers du plateau et l'autre en rajoutant une pièce de bois sur le côté.
+Ensuite il s'avère que les courroies ne suffisent pas à supporter les plateaux. De plus l'une d'entre elles n'était pas assez serrée.
+Nous avons donc ajoutés durant cette séance une glissière à chacun des plateaux permettant de rectifier la trajectoire ainsi que de 
+maintenir les plateaux droits.
+Pour cela, nous avons dû installer plusieurs planches de bois que nous avons percées et remplies de colle afin de fixer chaque extrémité 
+des deux glissières. Nous avons ensuite découpés ces glissières pour ne pas laisser de trop grands pics de fer dangereux dépasser du 
+barduino. Ces extrémitées restent à protégées pour garantir la sécurité.
+Au final, nous avons skotchés toutes les connections de fils apparentes et avons rallongés ceux qui exerçaient une tension lors du 
+déplacement du plateau. Nous avons également skotchés les cartes à l'arrière du barduino.
