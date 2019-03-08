@@ -14,3 +14,5 @@ marcher. Il s'agit du moteur nema17 qui permet le déplacement du socle sur le g
 La question qui se pose maintenant est la suivante: Est-ce qu'un moteur continu est plus intéressant dans notre cas qu'un moteur pas à pas.
 Personellement, je ne vois pas le problème avec le moteur pas à pas. La vitesse peut être assez élevée, il faut juste voir si il aura assez 
 de force pour déplacer le socle quand on ajoutera la courroie.
+
+![alt text](https://github.com/quentinhqn/barduino/blob/master/rapport%20de%20s-ance/2%C3%A8me%20moteur.jpg?raw=true "test")
