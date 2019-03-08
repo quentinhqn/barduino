@@ -1,1 +1,24 @@
-Nous avons donc mis le code 
+Nous avons donc mis le code final dans le projet et nous aons donc pu nous apercevoir de certaines contraintes dont nous nous étions
+pas rendue compte.
+Principalement nous nous sommes apercue  que notre projet fixé uniquement sur courroie n'était pas assez solide et de ce fait le système 
+ne supportait pas les efforts a fournir pour permettre de soulever le piston pour liberer les liquides .
+Nous avons donc essayé de resserrer les courroies pour améliorer la tenue de route des chariots mais sans grand succés.
+
+
+RAILS:
+Pour solidifier le tout nous avons donc eu l'idée de longer nos coirroies avec des barres de fer fixé au projet sur lesquels
+coulissent les deux chariots .
+Pour ce faire nous avons donc du rajouter des planches de bois de par et d'autre des courroies tout en laissant libre le passage des cables 
+ainsi que les chariots qui ne devaient pas être géné en fin de course puis il fallait percer les chariots parcouru de vis tout en ayant la 
+barre de fer les traversant en restant droite sans géner la couroie .Pour finaliser le tout il nous fallait fixer les barres pour ne plus
+qu'elle se déplace nous avons donc essayer de les bloquer de différenttes manière .Finalement après plusieurs echec nous aons opté pour 
+appliquer une large couche de colle au pistolet a colle dans les trou supportant la barre .
+
+PROGRAMME :
+Nous avons aussi verifié l'intégralité du projet avec des modules servant a ne verifier que un éléments.Nous avons aussi supprimer les
+0 d'erreur que nous renvoé nos capteur de distance et qui faussait le fonctionnement du code principal.
+
+DIVERS:
+Nous avons aussi passer un certain temps a souder les fils entre eux pour ne oplus avoir de fil volant ainsi que scotcher les cables à
+l'arduino pour éviter au maximum qu'ils s'arrachent les cables dénudé proche ont étaient recouvert de scotch pour éviter tout court-circuit
+entre plusieurs fils dénudé.
