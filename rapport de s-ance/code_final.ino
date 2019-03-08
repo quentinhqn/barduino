@@ -249,12 +249,18 @@ void position_plat(double posXplat, double posYplat){
   delay(100);
   NewPing sonar2(13,12,500);
   delay(100);
-  posXplat = sonar1.ping_cm();
-  posYplat = sonar2.ping_cm();
-
+  double x = sonar1.ping_cm();
+  double y = sonar2.ping_cm();
   
-  Serial.print("cm1=");
-  Serial.println(posXplat);
-  Serial.print("cm2=");
-  Serial.println(posYplat);
+  if (x!=0){
+    posXplat = x;
+    Serial.print("cm1=");
+    Serial.println(posXplat);
+    }
+  if (y!=0){
+    posYplat = y;
+    Serial.print("cm2=");
+    Serial.println(posYplat);
+    }
+    
 }
