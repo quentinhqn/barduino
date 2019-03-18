@@ -1,0 +1,16 @@
+void deplacerX(int bouteille){
+  bool a=false;
+  posXrech=posBoutX[bouteille-1];
+  while(a==false){
+  double posXplat = positionXplat();
+  if(posXrech<posXplat){
+    moteurX(false);
+  }
+  else if(posXrech >posXplat){
+    moteurX(true);
+  }
+  else if(posXrech==posXplat){
+    a=true;
+    analogWrite(ENA, 0);
+  }
+  }
