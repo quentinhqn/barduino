@@ -2,7 +2,7 @@ C'est la première séance pendant laquelle nous commençons à travailler sur n
 
 Notre projet est un Barduino commencé par un autre groupe d'étudiants en 2016/2017.
 Au début de la séance nous nous sommes demandés ce que nous avions à faire sur le projet. Nous shouaitons remplacer les vis qui permettent
-l'avancée du plateau supportant le verre par des courroies, créer une commnde vocale (nous aurons seulement besoin de notre voix pour faire
+l'avancée du plateau supportant le verre par des courroies, créer une commande vocale (nous aurons seulement besoin de notre voix pour faire
 le choix du cocktail)et ajouter des leds pour rendre les support plus joli. 
 Ensuite nous avons répartis les tâches et fait un planning. Je m'occuperais surtout de la partie codage des moteurs alors que Quentin 
 s'occupera de la commande vocale et de l'installation des courroies. Pour la dernière séance nous ferons un point esthétique avec les diodes 
