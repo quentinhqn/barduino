@@ -1,9 +1,8 @@
 #include <Servo.h>
 Servo servo1;
 
-
 #include <SoftwareSerial.h>
-#define RX 10
+#define RX 6
 #define TX 11
 char data;
 SoftwareSerial Blue(RX,TX);
@@ -14,26 +13,14 @@ float cm1=0;
 float cm2=0;
 
 
-//Différentes variables
-//Distance entre 2 bouteilles en longueur MOTEUR A
-int lo = 500;
-//Distance entre 2 bouteilles en largeur MOTEUR B
-int la = 500;
-//La vitesse des moteurs
-int vA = 100;
-int vB = 100;
-/**
- * Jusqu'ici on peut modifier
- */
-
 
 //Moteur stylé
-int ENA = 9;
+int ENA = 3;
 int IN1 = 4;
 int IN2 = 14;
 //Moteur rouge
 int ENB = 5;
-int IN3 = 6;
+int IN3 = 9;
 int IN4 = 7;
 
 
@@ -51,12 +38,15 @@ int posBoutX[7];
 int Y1=13;
 int Y2=2;
 
+void deplacer(int);
 
-
-
-void position_plat(double , double );
+float positionXplat();
+float positionYplat();
+void deplacerX(int);
+void deplacerY(int);
+void moteurX(bool);
+void moteurY(bool);
 void dosage(int );
-void deplacer(int , double , double);
 
 void setup() {
 
@@ -83,31 +73,32 @@ void setup() {
 //on donne la direction de départ du moteur stylé
   digitalWrite(IN1,LOW);
   digitalWrite(IN2,HIGH);
+  
 //pareil pour moteur rouge
   digitalWrite(IN3,HIGH);
   digitalWrite(IN4,LOW);
 
-  posBoutX[0]=42;
-  posBoutX[1]=37;
-  posBoutX[2]=31;
-  posBoutX[3]=24;
-  posBoutX[4]=16;
+  posBoutX[0]=46;
+  posBoutX[1]=42;
+  posBoutX[2]=35;
+  posBoutX[3]=23;
+  posBoutX[4]=17;
   posBoutX[5]=8;
-  posBoutX[6]=3;
+  posBoutX[6]=5;
 
-  //cocktail 1 bouteilles 1,2,3,4
-  cocktail[0]=1;
+  //cocktail 1 bouteilles 7,2,3,4
+  cocktail[0]=7;
   cocktail[1]=2;
   cocktail[2]=3;
   cocktail[3]=4;
-  //cocktail 2 bouteilles 1,2,5
+  //cocktail 2 bouteilles 4,6,5
   cocktail[4]=3;
   cocktail[5]=2;
   cocktail[6]=5;
   cocktail[7]=0;
-  //cocktail 3 bouteilles 2,7,6,3
+  //cocktail 3 bouteilles 2,5,6,3
   cocktail[8]=2;
-  cocktail[9]=7;
+  cocktail[9]=5;
   cocktail[10]=6;
   cocktail[11]=3;
 
@@ -119,7 +110,7 @@ void setup() {
   doses[4]=1;
   doses[5]=3;
   doses[6]=3;
-  doses[7]=4;
+  doses[7]=0;
   doses[8]=2;
   doses[9]=2;
   doses[10]=1;
@@ -127,7 +118,7 @@ void setup() {
   }
 
 void loop() {
-
+  
   if (choix_Cock==0){
     while(Blue.available()){
     delay(100);
@@ -138,105 +129,180 @@ void loop() {
     Serial.print(data);
   if (data=='A'){
     choix_Cock=1;
+    Serial.println("le1");
     }
   if (data=='B'){
     choix_Cock=2;
-    Serial.println("c bon");
+    Serial.println("le2");
     }
   if (data=='C'){
     choix_Cock=3;
+    Serial.println("le3");
     }
   if(data=='D'){
-    choix_Cock=4;
+    Serial.println("mauvaise commande");
       }
     }
-  }
+  
 
 
   if (choix_Cock != 0){
     for (int compt_Ingr=0; compt_Ingr<4; compt_Ingr++){
       bouteille=(choix_Cock-1)*4+compt_Ingr;
-      deplacer(cocktail[bouteille], posXplat, posYplat);
-      dosage(doses[bouteille]);
-      Serial.println(doses[bouteille]);
+      if(cocktail[bouteille] != 0){
+      deplacer(cocktail[bouteille]);
+      delay(500);
+      deplacer(cocktail[bouteille]);
+      //deplacerX(cocktail[bouteille]);
+      //deplacerY(cocktail[bouteille]);
+      Serial.println("ok");
+      dosage(doses[bouteille]);}
     }
     choix_Cock=0;
+    Serial.println("Le cocktail est fini");
+    delay(10000);
   }
 
   
 }
+}
 
-void deplacer(int bouteille, double posXplat, double posYplat){
-  int distA=0;
-  int distB=0;
-  bool posOK = false;
+  
+
+
+void deplacerX(int bouteille){
+  bool a=false;
   posXrech=posBoutX[bouteille-1];
+  while(a==false){
+  double posXplat = positionXplat();
+  if(posXrech<posXplat){
+    moteurX(false);
+  }
+  else if(posXrech >posXplat){
+    moteurX(true);
+  }
+  else if(posXrech==posXplat){
+    a=true;
+    analogWrite(ENA, 0);
+  }
+  }
+}
+
+
+void deplacerY(int bouteille){
+  bool b=false;
   if (bouteille==1 or bouteille==3 or bouteille==5 or bouteille==7){
     posYrech=Y1;
   }
   else{
     posYrech=Y2;
   }
-  position_plat(posXplat, posYplat);
-  if (posXrech-posXplat<0){
-    digitalWrite(IN1,LOW);
-    digitalWrite(IN2,HIGH);
+  while(b==false){
+  double posYplat = positionYplat();
+  if(posYrech<posYplat){
+    moteurY(true);
   }
-  else{
-    digitalWrite(IN1,HIGH);
-    digitalWrite(IN2,LOW);
+  else if(posYrech >posYplat){
+    moteurY(false);
   }
-  if (posYrech-posYplat<0){
-    digitalWrite(IN4,HIGH);
-    digitalWrite(IN3,LOW);
+  else if(posYrech==posYplat){
+    b=true;
+    analogWrite(ENB, 0);
   }
-  else{
-    digitalWrite(IN4,LOW);
-    digitalWrite(IN3,HIGH);
-  }
-  if (bouteille==0){
-    posOK == true;
-  }
-  while (posOK == false){
-    position_plat(posXplat, posYplat);
-    distA=posXrech-posXplat;
-    if (distA<0){
-      distA=-distA;
-    }
-    distB=posYrech-posYplat;
-    if (distB<0){
-      distB=-distB;
-    }
-    if (distA>255){
-    distA=255;
-    }
-    if (distB>255){
-      distB=255;
-    }
-    if (distA<15){
-      distA=15;
-    }
-    if (distB<15){
-      distB=15;
-    }
-    if (distA<2 and distB<2){
-      posOK=true;
-      distA=0;
-      distB=0;
-    }
-    analogWrite(ENA,distA);
-    analogWrite(ENB,distB);
   }
 }
+
+void deplacer(int bouteille){
+  bool b=false;
+  if (bouteille==1 or bouteille==3 or bouteille==5 or bouteille==7){
+    posYrech=Y1;
+  }
+  else{
+    posYrech=Y2;
+  }
+  bool c=false;
+  bool a=false;
+  posXrech=posBoutX[bouteille-1];
+  while(c==false){
+  double posXplat = positionXplat();
+  if (a==false){
+  if(posXrech<posXplat){
+    moteurX(false);
+  }
+  else if(posXrech >posXplat){
+    moteurX(true);
+  }
+  else if(posXrech==posXplat){
+    a=true;
+    analogWrite(ENA, 0);
+  }
+  }
+  if (b==false){
+  double posYplat = positionYplat();
+  if(posYrech<posYplat){
+    moteurY(true);
+  }
+  else if(posYrech >posYplat){
+    moteurY(false);
+  }
+  else if(posYrech==posYplat){
+    b=true;
+    analogWrite(ENB, 0);
+  }
+  }
+  if (a==true){
+    if (b==true){
+      c=true;
+    }
+  }
+  }
+}
+
+//direction=true, vers la droite
+//direction=false, vers la gauche
+void moteurX(bool direction){
+  if (direction==true){
+    
+  Serial.println("la");
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  analogWrite(ENA, 150);}
+  
+  if (direction==false){
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN1, LOW);
+  analogWrite(ENA, 150);}
+}
+
+//direction=true, vers l'arrière
+//direction=false, vers l'avant
+void moteurY(bool direction){
+  if (direction==false){
+  digitalWrite(IN4, LOW);
+  digitalWrite(IN3, HIGH);
+  analogWrite(ENB, 150);}
+  
+  if (direction==true){
+  digitalWrite(IN4, HIGH);
+  digitalWrite(IN3, LOW);
+    analogWrite(ENB, 150);}
+}
+
 //verse un certain nombre de doses dans le verre
 void dosage(int doses){
-  
-  servo1.attach(3);
+  Serial.print("on verse ");
+  Serial.print(doses);
+  Serial.println(" doses");
+  servo1.attach(10);
   for(int i=0; i<doses; i++){
     servo1.write(90);
+    //servo1.detach();
     delay(5000);
+    //servo1.attach(3);
     servo1.write(0);
+    //servo1.detach();
     delay(5000);
+    //servo1.attach(3);
   }
   
   servo1.detach();
@@ -244,23 +310,37 @@ void dosage(int doses){
 
 
 //actualise la position du plateau en x et en y
-void position_plat(double posXplat, double posYplat){
-  NewPing sonar1(8,2,500);
+float positionYplat(){
+  bool posOK=false;
+  double x=0;
+  while(posOK==false){
+  NewPing sonar1(2,8,500);
   delay(100);
-  NewPing sonar2(13,12,500);
-  delay(100);
-  double x = sonar1.ping_cm();
-  double y = sonar2.ping_cm();
-  
+  x = sonar1.ping_cm();
+  Serial.print("POSITION Y = ");
+  Serial.println(x);
   if (x!=0){
-    posXplat = x;
-    Serial.print("cm1=");
-    Serial.println(posXplat);
+    if (x<100){
+    posOK=true;}
     }
-  if (y!=0){
-    posYplat = y;
-    Serial.print("cm2=");
-    Serial.println(posYplat);
+  }
+  return x;
+}
+
+float positionXplat(){
+  bool posOK=false;
+  double x=0;
+  while(posOK==false){
+  NewPing sonar1(13,12,500);
+  delay(100);
+  x = sonar1.ping_cm();
+  
+  Serial.print("POSITION X = ");
+  Serial.println(x);
+  if (x!=0){
+    if (x<100){
+    posOK=true;}
     }
-    
+  }
+  return x;
 }
